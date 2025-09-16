@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="WhatsApp Image 2025-09-15 at 20.09.02_05947dd4.jpg" type="image/png">
+    <title>احجزلى - تأجير السيارات</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <span data-ar="احجزلى" data-en="Ahgazly">احجزلى</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="#cars" data-ar="السيارات" data-en="Cars">السيارات</a></li>
+                    <li><a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+                    <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="lang-toggle" id="langToggle">
+                        <span>EN</span>
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 data-ar="اكتشف أفضل تجربة تأجير سيارات" data-en="Discover the Best Car Rental Experience">
+                    اكتشف أفضل تجربة تأجير سيارات
+                </h1>
+                <p data-ar="احجز سيارتك المثالية بأفضل الأسعار وأعلى جودة خدمة" data-en="Book your perfect car at the best prices with highest quality service">
+                    احجز سيارتك المثالية بأفضل الأسعار وأعلى جودة خدمة
+                </p>
+                <button class="cta-button" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+            </div>
+            
+            <div class="search-form">
+                <h3 data-ar="ابحث عن سيارتك" data-en="Find Your Car">ابحث عن سيارتك</h3>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label data-ar="تاريخ الاستلام" data-en="Pickup Date">تاريخ الاستلام</label>
+                        <input type="date" id="pickupDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="تاريخ الإرجاع" data-en="Return Date">تاريخ الإرجاع</label>
+                        <input type="date" id="returnDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الموقع" data-en="Location">الموقع</label>
+                        <select id="location" required>
+                            <option value="" data-ar="اختر الموقع" data-en="Select Location">اختر الموقع</option>
+                            <option value="cairo" data-ar="القاهرة" data-en="Cairo">القاهرة</option>
+                            <option value="alexandria" data-ar="الإسكندرية" data-en="Alexandria">الإسكندرية</option>
+                            <option value="giza" data-ar="الجيزة" data-en="Giza">الجيزة</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn" data-ar="بحث" data-en="Search">بحث</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="cars-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="سياراتنا المميزة" data-en="Our Featured Cars">سياراتنا المميزة</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-category="all" data-ar="الكل" data-en="All">الكل</button>
+                <button class="filter-btn" data-category="economy" data-ar="اقتصادية" data-en="Economy">اقتصادية</button>
+                <button class="filter-btn" data-category="luxury" data-ar="فاخرة" data-en="Luxury">فاخرة</button>
+                <button class="filter-btn" data-category="suv" data-ar="دفع رباعي" data-en="SUV">دفع رباعي</button>
+            </div>
+
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="خدماتنا المتميزة" data-en="Our Premium Services">خدماتنا المتميزة</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-ar="خدمة 24/7" data-en="24/7 Service">خدمة 24/7</h3>
+                    <p data-ar="نحن متاحون لخدمتك على مدار الساعة طوال أيام الأسبوع" data-en="We are available to serve you 24 hours a day, 7 days a week">
+                        نحن متاحون لخدمتك على مدار الساعة طوال أيام الأسبوع
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-ar="تأمين شامل" data-en="Full Insurance">تأمين شامل</h3>
+                    <p data-ar="جميع سياراتنا مؤمنة بالكامل لضمان راحة بالك" data-en="All our cars are fully insured to ensure your peace of mind">
+                        جميع سياراتنا مؤمنة بالكامل لضمان راحة بالك
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-ar="توصيل مجاني" data-en="Free Delivery">توصيل مجاني</h3>
+                    <p data-ar="نوصل السيارة إلى موقعك المفضل مجاناً" data-en="We deliver the car to your preferred location for free">
+                        نوصل السيارة إلى موقعك المفضل مجاناً
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-ar="دعم فني متميز" data-en="Premium Support">دعم فني متميز</h3>
+                    <p data-ar="فريق دعم محترف جاهز لمساعدتك في أي وقت" data-en="Professional support team ready to help you anytime">
+                        فريق دعم محترف جاهز لمساعدتك في أي وقت
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-ar="الهاتف" data-en="Phone">الهاتف</h4>
+                            <p>+20 15 58282767</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
+                            <p><a href="mailto:abdelrhmanzaki1000@gmail.com" class="__cf_email__" data-cfemail="4d24232b220d2c252a2c372134632e2220">[abdelrhmanzaki1000@gmail.com&#160;]</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-ar="العنوان" data-en="Address">العنوان</h4>
+                            <p data-ar="شارع التحرير، القاهرة، مصر" data-en="Tahrir Street, Cairo, Egypt">شارع التحرير، القاهرة، مصر</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="الاسم" data-ar-placeholder="الاسم" data-en-placeholder="Name" required>
+                    <input type="email" placeholder="البريد الإلكتروني" data-ar-placeholder="البريد الإلكتروني" data-en-placeholder="Email" required>
+                    <textarea placeholder="الرسالة" data-ar-placeholder="الرسالة" data-en-placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span data-ar="احجزلى" data-en="Ahgazly">احجزلى</span>
+                    </div>
+                    <p data-ar="أفضل خدمة تأجير سيارات في مصر" data-en="Best car rental service in Egypt">
+                        أفضل خدمة تأجير سيارات في مصر
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="#cars" data-ar="السيارات" data-en="Cars">السيارات</a></li>
+                        <li><a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ahgazly "><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ahgazly.eg?igsh=eWVuNm5tYnozYnV4"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-ar="© 2024 احجزلى. جميع الحقوق محفوظة" data-en="© 2024 Ahgazly. All rights reserved">
+                    © 2025 احجزلى. جميع الحقوق محفوظة
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-ar="احجز السيارة" data-en="Book Car">احجز السيارة</h2>
+            <form class="modal-form">
+                <input type="text" placeholder="الاسم الكامل" data-ar-placeholder="الاسم الكامل" data-en-placeholder="Full Name" required>
+                <input type="email" placeholder="البريد الإلكتروني" data-ar-placeholder="البريد الإلكتروني" data-en-placeholder="Email" required>
+                <input type="tel" placeholder="رقم الهاتف" data-ar-placeholder="رقم الهاتف" data-en-placeholder="Phone Number" required>
+                <input type="date" id="modalPickupDate" required>
+                <input type="date" id="modalReturnDate" required>
+                <button type="submit" data-ar="تأكيد الحجز" data-en="Confirm Booking">تأكيد الحجز</button>
+            </form>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./cars-data.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
